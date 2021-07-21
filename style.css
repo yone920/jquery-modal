@@ -1,4 +1,104 @@
+body, p {
+  /* margin: 0; */
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body, html {
+  height: 100%;
+}
+
 .main {
+  background-image: url("/img/Hero_img_mobile_01.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+section.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12rem;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+}
+
+p:first-child {
+  margin-bottom: 3rem;
+}
+
+button {
+  padding: 1.2rem 3rem;
+  font-size: 1rem;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 64%, rgba(232,232,232,1) 100%);
+}
+
+section.modal {
+  position: absolute;
+  background-color: #fff;
+  height: 100vh;
+  z-index: 99;
+  display: none;
+  flex-direction: column;
+  flex-flow: wrap;
+  align-content: space-between;
   padding: 2rem;
-  background-color: blueviolet;
+}
+
+section.modal > p {
+  color: #000;
+  font: 1rem;
+}
+
+
+.modal:first-child {
+  margin-right: auto;
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    background-image: url("/img/hero_img_01.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section > p {
+    font-size: 2.5rem;
+  }
+
+
+  section.modal {
+    height: 50vh;
+    width: 50vw;
+    padding: 3rem;
+  }
+
+  button {
+    padding: 1.2rem 4rem;
+    font-size: 1.8rem;
+  }
 }
